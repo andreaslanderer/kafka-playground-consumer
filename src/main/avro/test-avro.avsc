@@ -6,6 +6,18 @@
         "avro.java.string": "String",
         "type": "string"
       }
+    },
+    {
+      "name": "luckyNumber",
+      "type": "long"
+    },
+    {
+      "default": null,
+      "name": "age",
+      "type": [
+        "null",
+        "int"
+      ]
     }
   ],
   "name": "TestAvroMessage",

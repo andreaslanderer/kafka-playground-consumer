@@ -19,6 +19,7 @@ class TestTopicConsumer {
     fun listen(record: ConsumerRecord<String, TestAvroMessage>) {
         val avroMessage = record.value()
         KafkaAvroDeserializerConfig.SPECIFIC_AVRO_READER_CONFIG
-        LOGGER.info("Received message: ${avroMessage.value} with key: ${record.key()}")
+        LOGGER.info("Received message '${avroMessage.value}' with key '${record.key()}', " +
+                "lucky number '${avroMessage.luckyNumber}', and age '${avroMessage.age ?: "n/a"}'")
     }
 }
